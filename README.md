@@ -9,7 +9,7 @@
    * refer to [baker RFDiff All Atom](https://github.com/baker-laboratory/rf_diffusion_all_atom) github for specifics
    * adjust code to your directories and pdb
 2. upload .sh file and pdb in same directory
-   * this code runs an array of 4 jobs to make 250 designs each, for a total of 100 designs generated
+   * this code runs an array of 4 jobs to make 250 designs each, for a total of 1000 designs generated
    * run with
    * ```
      sbatch 1_RFDiffusion.sh
