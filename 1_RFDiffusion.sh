@@ -47,7 +47,7 @@ apptainer run --bind /quobyte:/quobyte \
     inference.input_pdb=$input_pdb_path \
     "contigmap.contigs=['A1-145,30-30,A150-300']" \
     inference.ligand=4EP \
-    inference.num_designs=5
+    inference.num_designs=250
 } || { echo "Error: RFDiffusion step failed."; exit 1; }
 
 ######################### Step 2: Dock Ligands #########################
