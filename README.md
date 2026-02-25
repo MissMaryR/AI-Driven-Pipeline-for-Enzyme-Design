@@ -17,4 +17,4 @@
 3. will generate:
    * logs folder with out and error files
    * if a ROSETTA_CRASH file appears - check error file for error
-   * outputs folder with generated pdbs - (0-3)_(0-999).pdb
+   * outputs folder with generated pdbs - (0-3)_(0-249).pdb = 1000 pdbs
