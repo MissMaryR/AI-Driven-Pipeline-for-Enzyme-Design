@@ -8,3 +8,12 @@
 1. adjust 1_RFDiffusion.sh to insert the selected amount of sequence
    * refer to [baker RFDiff All Atom](https://github.com/baker-laboratory/rf_diffusion_all_atom) github for specifics
    * adjust code to your directories and pdb
+2. upload .sh file and pdb in same directory
+   * run with
+   * ```
+     sbatch 1_RFDiffusion.sh
+     ```
+3. will generate:
+   * logs folder with out and error files
+   * if a ROSETTA_CRASH file appears - check error file for error
+   * outputs folder with generated pdbs
