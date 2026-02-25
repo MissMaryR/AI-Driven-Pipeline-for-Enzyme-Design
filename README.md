@@ -1,6 +1,7 @@
 # AI Driven Pipeline for Enzyme Design
 
-## uses RFDiffusion, LigandMPNN, AlphaFold3/Chai/Boltz to design an enzyme with novel inserted sequence
+## RFDiffusion -> LigandMPNN -> AlphaFold3/Chai/Boltz
+## designs an enzyme with novel inserted sequence
 
 ## 1) Begin with RFDiffusion
 
