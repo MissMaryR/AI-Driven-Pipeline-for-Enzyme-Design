@@ -45,7 +45,7 @@ apptainer run --bind /quobyte:/quobyte \
     --nv ${CONTAINER} -u run_inference.py \
     inference.output_prefix=$output_prefix \
     inference.input_pdb=$input_pdb_path \
-    "contigmap.contigs=['A1-151,30-30,A159-319']" \
+    "contigmap.contigs=['A1-145,30-30,A150-300']" \
     inference.ligand=4EP \
     inference.num_designs=5
 } || { echo "Error: RFDiffusion step failed."; exit 1; }
@@ -64,7 +64,7 @@ finish_launching(['pymol', '-qc'])  # '-qc' for quiet and no GUI
 
 # Paths setup
 x_pdb_folder = './outputs/'
-y_pdb_path = './docked_15.pdb'
+y_pdb_path = './input.pdb'
 output_folder = './aligned_outputs/'
 
 # Ensure the output folder exists
@@ -96,14 +96,14 @@ for pdb_file in os.listdir(x_pdb_folder):
         cmd.align(pdb_name, 'y_pdb')
 
         # Create a new object that contains the aligned X PDB and the ligand
-        cmd.create(f'docked_{pdb_name}', f'{pdb_name} + y_ligand')
+        cmd.create(f'input_{pdb_name}', f'{pdb_name} + y_ligand')
 
         # Save the new object as a PDB
-        cmd.save(os.path.join(output_folder, f'docked_{pdb_name}.pdb'), f'docked_{pdb_name}')
+        cmd.save(os.path.join(output_folder, f'input_{pdb_name}.pdb'), f'input_{pdb_name}')
 
         # Delete the loaded objects to keep the session clean
         cmd.delete(pdb_name)
-        cmd.delete(f'docked_{pdb_name}')
+        cmd.delete(f'input_{pdb_name}')
 
 # Clean up
 cmd.delete('y_pdb')
