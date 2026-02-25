@@ -23,6 +23,9 @@ then activate and install pymol
 ```
 conda install -c conda-forge -c schrodinger pymol-bundle
 ```
+```
+conda deactivate
+```
 
 ## 1) Begin with RFDiffusion
 
