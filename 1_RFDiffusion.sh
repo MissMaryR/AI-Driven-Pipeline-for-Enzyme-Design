@@ -34,7 +34,7 @@ CONTAINER=${SCRIPT_DIR}/rf_se3_diffusion.sif
 cd ${SCRIPT_DIR}
     
 
-input_pdb_path="/quobyte/jbsiegelgrp/username/${round}/docked_15.pdb"
+input_pdb_path="/quobyte/jbsiegelgrp/username/${round}/input.pdb"
 output_prefix="/quobyte/jbsiegelgrp/username/${round}/outputs/${SLURM_ARRAY_TASK_ID}"
 
 
