@@ -3,6 +3,27 @@
 ## RFDiffusion -> LigandMPNN -> AlphaFold3/Chai/Boltz
 ## designs an enzyme with novel inserted sequence
 
+After logging into HIVE, load conda
+```
+module load conda/latest
+module load cuda/12.6.2  # Good to have even when you're not using a GPU
+```
+
+
+```
+conda activate pymol_env
+```
+
+if not there, make the environment
+```
+conda create -n pymol_env -y python=3.10
+```
+
+then activate and install pymol
+```
+conda install -c conda-forge -c schrodinger pymol-bundle
+```
+
 ## 1) Begin with RFDiffusion
 
 1. adjust 1_RFDiffusion.sh to insert the selected amount of sequence
